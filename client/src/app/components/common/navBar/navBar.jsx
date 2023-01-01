@@ -1,11 +1,10 @@
 import React from "react";
 import "./navBar.scss";
-import { ReactComponent as InstLogo } from "../../../assets/svg/instagram.svg";
-import { ReactComponent as TelegramLogo } from "../../../assets/svg/telegram.svg";
-import { ReactComponent as WhatsLogo } from "../../../assets/svg/whatsapp.svg";
+
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { getCurrentTrainerData } from "../../../store/trainers";
+import SocialMedia from "../socialMedia";
 const NavBar = () => {
   const currentTrainer = useSelector(getCurrentTrainerData());
 
@@ -14,15 +13,11 @@ const NavBar = () => {
       <header className="header">
         <div className="header__navbar _container">
           <div className="header__icons">
-            <span className="icon">
-              <InstLogo />
-            </span>
-            <span className="icon">
-              <TelegramLogo />
-            </span>
-            <span className="icon">
-              <WhatsLogo />
-            </span>
+            <SocialMedia
+              instLink={"_balushaa"}
+              telegramLink={"balushaaaa"}
+              whatsLink={"79874914280"}
+            />
           </div>
           <menu className="header__menu">
             <div className="header__item headerButton">

@@ -61,6 +61,7 @@ const LoginForm = () => {
       <div className="text__main">Чтобы получить доступ ко всем программам</div>
       <form onSubmit={handleSubmit}>
         <TextField
+          inputClassName="form-control"
           label=""
           name="email"
           value={data.email}
@@ -69,6 +70,7 @@ const LoginForm = () => {
           placeholder="Почта"
         />
         <TextField
+          inputClassName="form-control"
           label=""
           type="password"
           name="password"

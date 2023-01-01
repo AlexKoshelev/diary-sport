@@ -2,8 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./trainersCard.scss";
 import SelectField from "../../common/form/selectField/selectField";
+import TextField from "../../common/form/textField/textField";
 
-import TextFieldTime from "../../common/form/textField/textFieldTime";
+// import TextFieldTime from "../../common/form/textField/textFieldTime";
 
 const TrainersCard = ({
   clientsList,
@@ -25,10 +26,10 @@ const TrainersCard = ({
         />
       </div>
       <div className="trainers__card-cardio">
-        <TextFieldTime
+        <TextField
           label={"Кардио:"}
           className="clients__info"
-          classNameInput="select__field trainerCard"
+          inputClassName="select__field trainerCard"
           name="name"
           onChange={(target) => handleChangeCardio(target.value)}
         />

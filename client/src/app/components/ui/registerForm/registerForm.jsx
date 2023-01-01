@@ -89,6 +89,7 @@ const RegisterForm = () => {
       <form onSubmit={handleSubmit}>
         <TextField
           label="Введите электронную почту"
+          inputClassName="form-control"
           placeholder="Почта"
           name="email"
           value={data.email}
@@ -96,6 +97,7 @@ const RegisterForm = () => {
           error={errors.email}
         />
         <TextField
+          inputClassName="form-control"
           label="Введите пароль"
           type="password"
           name="password"
@@ -105,6 +107,7 @@ const RegisterForm = () => {
           error={errors.password}
         />
         <TextField
+          inputClassName="form-control"
           label="Укажите свое имя"
           placeholder="Имя"
           name="name"
@@ -124,6 +127,7 @@ const RegisterForm = () => {
           label="Выберите ваш пол"
         />
         <TextField
+          inputClassName="form-control"
           label="Введите номер телефона"
           placeholder="Номер телефона"
           name="phone"

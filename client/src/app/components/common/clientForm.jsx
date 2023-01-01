@@ -1,74 +1,86 @@
 import React from "react";
 import PropTypes from "prop-types";
-import TextFieldParams from "./form/textField/textFieldParams";
+
+import TextField from "./form/textField/textField";
 const ClientForm = ({ handleSubmit, clientData, handleChange, btnTitle }) => {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <TextFieldParams
+        <TextField
           className="clients__info"
+          inputClassName="form-control"
           name="name"
           value={clientData.name}
           onChange={handleChange}
           placeholder="Имя"
         />
-        <TextFieldParams
+
+        <TextField
+          inputClassName="form-control"
           className="clients__info"
           name="phone"
           value={clientData.phone}
           onChange={handleChange}
           placeholder="Номер телефона"
         />
-        <TextFieldParams
+        <TextField
           className="clients__info"
+          inputClassName="form-control"
           name="age"
           value={clientData.age}
           onChange={handleChange}
           placeholder="Возраст"
         />
-        <TextFieldParams
+        <TextField
+          inputClassName="form-control"
           className="clients__info"
           name="growth"
           value={clientData.growth}
           onChange={handleChange}
           placeholder="Рост"
         />
-        <TextFieldParams
+        <TextField
+          inputClassName="form-control"
           className="clients__info"
           name="weight"
           value={clientData.weight}
           onChange={handleChange}
           placeholder="Вес"
         />
-        <TextFieldParams
+        <TextField
+          inputClassName="form-control"
           className="clients__info"
           name="waist"
           value={clientData.waist}
           onChange={handleChange}
           placeholder="Обхват талии"
         />
-        <TextFieldParams
+        <TextField
+          inputClassName="form-control"
           className="clients__info"
           name="bust"
           value={clientData.bust}
           onChange={handleChange}
           placeholder="Обхват груди"
         />
-        <TextFieldParams
+        <TextField
+          inputClassName="form-control"
           className="clients__info"
           name="hips"
           value={clientData.hips}
           onChange={handleChange}
           placeholder="Обхват бёдер"
         />
-        <TextFieldParams
+        <TextField
+          inputClassName="form-control"
           className="clients__info"
           name="leg"
           value={clientData.leg}
           onChange={handleChange}
           placeholder="Обхват бедра"
         />
-        <TextFieldParams
+        <TextField
+          inputClassName="form-control"
           className="clients__info"
           name="arm"
           value={clientData.arm}

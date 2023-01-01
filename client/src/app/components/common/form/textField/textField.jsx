@@ -20,7 +20,7 @@ const TextField = ({
   const handleChange = ({ target }) => {
     onChange({ name: target.name, value: target.value });
   };
-  const inputClasses = classNames("form-control", inputClassName);
+  const inputClasses = classNames("", inputClassName);
   const getInputClasses = () => {
     return inputClasses + (error ? " is-invalid" : "");
   };
@@ -30,42 +30,81 @@ const TextField = ({
   const classes = classNames("textfield", className);
 
   return (
-    <div className={classes}>
-      <label htmlFor={name}>{label}</label>
-      <div className="input-group has-validation">
-        <div className="input__container">
-          <input
-            type={showPassword ? "text" : type}
-            id={name}
-            placeholder={placeholder}
-            name={name}
-            value={value}
-            onChange={handleChange}
-            className={
-              type !== "password"
-                ? getInputClasses()
-                : `${getInputClasses()} input_right-border`
-            }
-          />
-          {type === "password" && (
-            <button
-              className="btn btn-outline-secondary"
-              type="button"
-              onClick={toggleShowPassword}
-            >
-              {showPassword ? (
-                <LogoEyeSlash className="logo__eye" />
-              ) : (
-                <LogoEye className="logo__eye" />
+    <>
+      {label ? (
+        <div className={classes}>
+          <label htmlFor={name}>{label}</label>
+          <div className="input-group has-validation">
+            <div className="input__container">
+              <input
+                type={showPassword ? "text" : type}
+                id={name}
+                placeholder={placeholder}
+                name={name}
+                value={value}
+                onChange={handleChange}
+                className={
+                  type !== "password"
+                    ? getInputClasses()
+                    : `${getInputClasses()} input_right-border`
+                }
+              />
+              {type === "password" && (
+                <button
+                  className="btn btn-outline-secondary"
+                  type="button"
+                  onClick={toggleShowPassword}
+                >
+                  {showPassword ? (
+                    <LogoEyeSlash className="logo__eye" />
+                  ) : (
+                    <LogoEye className="logo__eye" />
+                  )}
+                </button>
               )}
-            </button>
-          )}
+            </div>
+            {error && <div className="invalid-feedback">{error}</div>}
+          </div>
         </div>
-        {error && <div className="invalid-feedback">{error}</div>}
-      </div>
-    </div>
+      ) : (
+        <div className={classes}>
+          <div className="input-group has-validation">
+            <div className="input__container">
+              <input
+                type={showPassword ? "text" : type}
+                id={name}
+                placeholder={placeholder}
+                name={name}
+                value={value}
+                onChange={handleChange}
+                className={
+                  type !== "password"
+                    ? getInputClasses()
+                    : `${getInputClasses()} input_right-border`
+                }
+              />
+              {type === "password" && (
+                <button
+                  className="btn btn-outline-secondary"
+                  type="button"
+                  onClick={toggleShowPassword}
+                >
+                  {showPassword ? (
+                    <LogoEyeSlash className="logo__eye" />
+                  ) : (
+                    <LogoEye className="logo__eye" />
+                  )}
+                </button>
+              )}
+            </div>
+            {error && <div className="invalid-feedback">{error}</div>}
+          </div>
+        </div>
+      )}
+    </>
   );
 };
+
 TextField.defaultProps = {
   type: "text",
 };
@@ -77,6 +116,8 @@ TextField.propTypes = {
   value: PropTypes.string,
   onChange: PropTypes.func,
   error: PropTypes.string,
+  className: PropTypes.string,
+  inputClassName: PropTypes.string,
 };
 
 export default TextField;

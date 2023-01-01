@@ -15,12 +15,14 @@ const ClientEditForm = ({
         <TextField
           label={"Имя"}
           className="clients__info"
+          inputClassName="form-control"
           name="name"
           value={clientData.name}
           onChange={handleChange}
           placeholder="Имя"
         />
         <TextField
+          inputClassName="form-control"
           label={"Номер телефона"}
           className="clients__info"
           name="phone"
@@ -29,6 +31,7 @@ const ClientEditForm = ({
           placeholder="Номер телефона"
         />
         <TextField
+          inputClassName="form-control"
           label={"Возраст"}
           className="clients__info"
           name="age"
@@ -37,6 +40,7 @@ const ClientEditForm = ({
           placeholder="Возраст"
         />
         <TextField
+          inputClassName="form-control"
           label={"Рост"}
           className="clients__info"
           name="growth"
@@ -45,6 +49,7 @@ const ClientEditForm = ({
           placeholder="Рост"
         />
         <TextField
+          inputClassName="form-control"
           label={"Вес"}
           className="clients__info"
           name="weight"
@@ -53,6 +58,7 @@ const ClientEditForm = ({
           placeholder="Вес"
         />
         <TextField
+          inputClassName="form-control"
           label={"Обхват талии"}
           className="clients__info"
           name="waist"
@@ -61,6 +67,7 @@ const ClientEditForm = ({
           placeholder="Обхват талии"
         />
         <TextField
+          inputClassName="form-control"
           label={"Обхват груди"}
           className="clients__info"
           name="bust"
@@ -69,6 +76,7 @@ const ClientEditForm = ({
           placeholder="Обхват груди"
         />
         <TextField
+          inputClassName="form-control"
           label={"Обхват бёдер"}
           className="clients__info"
           name="hips"
@@ -77,6 +85,7 @@ const ClientEditForm = ({
           placeholder="Обхват бёдер"
         />
         <TextField
+          inputClassName="form-control"
           label={"Обхват бедра"}
           className="clients__info"
           name="leg"
@@ -85,6 +94,7 @@ const ClientEditForm = ({
           placeholder="Обхват бедра"
         />
         <TextField
+          inputClassName="form-control"
           label={"Обхват руки"}
           className="clients__info"
           name="arm"
