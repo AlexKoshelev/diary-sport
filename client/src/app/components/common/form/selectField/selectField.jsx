@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./selectField.scss";
 import classNames from "classnames";
 const SelectField = ({
   label,

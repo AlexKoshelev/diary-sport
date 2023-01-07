@@ -1,10 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./trainersCard.scss";
 import SelectField from "../../common/form/selectField/selectField";
 import TextField from "../../common/form/textField/textField";
-
-// import TextFieldTime from "../../common/form/textField/textFieldTime";
 
 const TrainersCard = ({
   clientsList,
@@ -12,7 +9,10 @@ const TrainersCard = ({
   handleChangeCardio,
   workoutNumber,
   dateToday,
+  client,
 }) => {
+  console.log(client);
+
   return (
     <div className="trainers__card">
       <div className="trainers__card-selector">
@@ -25,20 +25,24 @@ const TrainersCard = ({
           key={clientsList.value}
         />
       </div>
-      <div className="trainers__card-cardio">
-        <TextField
-          label={"Кардио:"}
-          className="clients__info"
-          inputClassName="select__field trainerCard"
-          name="name"
-          onChange={(target) => handleChangeCardio(target.value)}
-        />
-      </div>
-      <div className="trainers__card-info info__worknum">
+      <TextField
+        label={"Кардио:"}
+        className="clients__info"
+        inputClassName="select__field trainerCard"
+        name="name"
+        onChange={(target) => handleChangeCardio(target.value)}
+      />
+      <div className="trainers__card-info">
         <div className="info__worknum">
           Тренеровка №
           {workoutNumber || workoutNumber === 0 ? (
-            <span>{workoutNumber + 1}</span>
+            <span>
+              {client === "Выберите клиента" ? (
+                <div className="info__worknum-top">выберите клиента</div>
+              ) : (
+                workoutNumber + 1
+              )}
+            </span>
           ) : (
             <span>
               :<div className="info__worknum-top">выберите клиента</div>

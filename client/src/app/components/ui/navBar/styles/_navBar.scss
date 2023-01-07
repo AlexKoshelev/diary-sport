@@ -1,0 +1,49 @@
+@import "../../../../../style/variables";
+.header {
+    background-color: $MAIN_COLOR1;
+    font-size: 1rem;
+    height: 3em;
+    display: flex;
+    margin-bottom: 20px;
+    &__navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__menu {
+        display: flex;
+    }
+    &__item {
+        padding: 10px;
+        border-radius: 0.5em;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:last-child {
+            border: solid 1px $GOLD_COLOR;
+            color: $GOLD_COLOR;
+            font-weight: 500;
+        }
+        &:hover{
+            border: solid 1px $GOLD_COLOR;
+            color: $GOLD_COLOR;
+            font-weight: 500;
+        }
+        &-active{
+            font-weight: 600;
+            color: $GOLD_COLOR;
+  
+            
+        }
+    }
+}
+a {
+    color: $MAIN_COLOR3;
+    &:hover{
+        color: $GOLD_COLOR;
+    }
+    
+}
+
+

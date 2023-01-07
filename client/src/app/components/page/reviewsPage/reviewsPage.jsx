@@ -1,5 +1,4 @@
 import React from "react";
-import "./reviewsPage.scss";
 import AboutImg from "../../../assets/img/otzivi.png";
 const ReviewsPage = () => {
   return (

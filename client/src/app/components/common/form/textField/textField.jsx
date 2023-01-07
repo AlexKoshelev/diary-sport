@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { ReactComponent as LogoEye } from "../../../../assets/svg/eye.svg";
 import { ReactComponent as LogoEyeSlash } from "../../../../assets/svg/eyeslash.svg";
-import "./textField.scss";
 import classNames from "classnames";
 const TextField = ({
   label,

@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./radioField.scss";
 
 const RadioField = ({ options, name, onChange, value, label }) => {
   const handleChange = ({ target }) => {

@@ -1,0 +1,79 @@
+@import "../../../../../style/variables";
+.diary__trainer .diary-container{
+    max-width: 600px;
+   
+}
+.select-client{
+    background-color: $MAIN_COLOR2;
+}
+.diary__layout{
+    display: flex;
+}
+.ant-picker-calendar .ant-picker-calendar-header{
+    justify-content:center;
+}
+.ant-radio-button.ant-radio-button-checked{
+    border-color: $GOLD_COLOR;
+}
+.ant-picker-calendar{
+    background-color: $MAIN_COLOR1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+
+}
+.ant-picker-body{
+    background-color: $MAIN_COLOR1;
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+    
+}
+.calendar__container{
+    margin: 70px 20px 20px 20px;
+    height: 420px;
+
+}
+.client__container{
+    margin: 20px;
+    background-color: $MAIN_COLOR1;
+    border-radius: 10px;
+    padding: 10px;
+    color: $MAIN_COLOR3;
+}
+.ant-picker-cell-inner.ant-picker-calendar-date{
+    max-height: 50px;
+}
+.ant-picker-cell-inner.ant-picker-calendar-date.ant-picker-calendar-date-today{
+background-color: $MAIN_COLOR1;
+border-top: solid 2px $GOLD_COLOR;
+}
+.ant-picker-calendar-date-value{
+    color: $MAIN_COLOR3;
+    text-align: center;
+}
+.ant-picker-calendar-date-content{
+    text-align: center !important;
+    color: $MAIN_COLOR3 !important;
+}
+.ant-picker-calendar-date-value::after{
+    color: $GOLD_COLOR;
+}
+.calendar-icon{
+    margin: 1px;
+}
+.ant-picker-date-panel{
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+    background-color: $MAIN_COLOR2;
+}
+.ant-picker-panel{
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+    background-color: $MAIN_COLOR2 !important;
+}
+.text{
+    color: $MAIN_COLOR3;
+    font-size: 1rem;
+    margin: 0 40px;
+}

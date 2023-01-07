@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { getCurrentClientsById, updateClient } from "../../../store/clients";
-import ClientEditForm from "../../common/clientEditForm";
+import ClientEditForm from "../../ui/clientEditForm";
 import { ReactComponent as ExitLogo } from "../../../assets/svg/logoutcurve.svg";
-import "./clientPage.scss";
 const ClientPage = () => {
   const dispatch = useDispatch();
   const params = useParams();

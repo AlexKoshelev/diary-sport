@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import "./diary.scss";
 import { useSelector } from "react-redux";
 import { getClientsById } from "../../../store/clients";
 import { getCurrentTrainerData } from "../../../store/trainers";
@@ -8,7 +7,7 @@ import { getWorkoutsById } from "../../../store/workouts";
 import { transformDate } from "../../../utils/transformDate";
 import Table from "../../ui/table/table";
 import TrainersCard from "../../ui/trainersCard/trainersCard";
-import Comments from "../../ui/comments/comments";
+import Comments from "../../common/comments/comments";
 import { Calendar } from "antd";
 import { ReactComponent as Bookmark } from "../../../assets/svg/around.svg";
 import ClientCard from "../../ui/clientCard/clientCard";
@@ -50,9 +49,6 @@ const DiaryPage = () => {
     setCardioTime(value);
   };
   const [selectedDate, setSelectedDate] = useState("");
-  console.log(selectedDate);
-
-  console.log(currentClientWorkoutsList);
 
   const hahdleSelectDate = (date) => {
     const day = date.$D;
@@ -90,6 +86,7 @@ const DiaryPage = () => {
                     workoutNumber={workoutNumber}
                     dateToday={dateToday}
                     className="select-client"
+                    client={selectClientId}
                   />
                   <Table
                     currentClientId={selectClientId}

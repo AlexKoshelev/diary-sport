@@ -1,5 +1,4 @@
 import React from "react";
-import "./nutrition.scss";
 import AboutImg from "../../../assets/img/food.png";
 const Nutrition = () => {
   return (

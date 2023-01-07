@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./textAreaField.scss";
 const TextAreaField = ({ name, value, onChange, error }) => {
   const handleChange = ({ target }) => {
     onChange({ name: target.name, value: target.value });

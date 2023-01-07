@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { NavLink, useNavigate } from "react-router-dom";
-import { getAuthErrors, logIn } from "../../../store/trainers";
+import { Navigate, NavLink, useNavigate } from "react-router-dom";
+import { getAuthErrors, getIsLoggedIn, logIn } from "../../../store/trainers";
 import { validator } from "../../../utils/validator";
 import TextField from "../../common/form/textField/textField";
-import "./loginForm.scss";
 
 const LoginForm = () => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const loginError = useSelector(getAuthErrors());
   const [data, setData] = useState({
@@ -15,7 +15,9 @@ const LoginForm = () => {
   });
 
   const [errors, setErrors] = useState({});
-  const navigate = useNavigate();
+  const isLoggedIn = useSelector(getIsLoggedIn());
+  console.log(isLoggedIn);
+
   const handleChange = (target) => {
     setData((prevState) => ({
       ...prevState,
@@ -51,10 +53,12 @@ const LoginForm = () => {
     /*     const isValid = validate();
     if (!isValid) return; */
     console.log(data);
-    navigate("/workouts");
 
-    dispatch(logIn({ payload: data }));
+    dispatch(logIn({ payload: data })).then(() => {
+      navigate("/diary", { replace: true });
+    });
   };
+
   return (
     <>
       <div className="form__login-text">Войди</div>

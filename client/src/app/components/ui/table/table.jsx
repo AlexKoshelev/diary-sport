@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useExercise } from "../../../hooks/useExercise";
 import { createWorkouts } from "../../../store/workouts";
-import "./table.scss";
 import TableHeader from "./tableHeader";
 import TableRow from "./tableRow";
 import PropTypes from "prop-types";

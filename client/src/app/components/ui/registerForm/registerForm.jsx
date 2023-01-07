@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { NavLink, useNavigate } from "react-router-dom";
-import { getAuthErrors, signUp } from "../../../store/trainers";
+import { Navigate, NavLink, useNavigate } from "react-router-dom";
+import { getAuthErrors, getIsLoggedIn, signUp } from "../../../store/trainers";
 import { validator } from "../../../utils/validator";
 import RadioField from "../../common/form/radioField/radioField";
 import TextField from "../../common/form/textField/textField";
-import "./registerForm.scss";
 
 const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -18,6 +17,7 @@ const RegisterForm = () => {
     phone: "",
     sex: "female",
   });
+  const isLoggedIn = useSelector(getIsLoggedIn());
 
   const [errors, setErrors] = useState({});
 
@@ -78,8 +78,9 @@ const RegisterForm = () => {
     if (!isValid) return; */
     console.log(data);
 
-    dispatch(signUp(data));
-    navigate("/workouts");
+    dispatch(signUp(data)).then(() => {
+      navigate("/diary", { replace: true });
+    });
   };
 
   return (

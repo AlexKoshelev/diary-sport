@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import "./trainerPage.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { ReactComponent as AddLogo } from "../../../assets/svg/addsquare.svg";
-
 import {
   getClientsById,
   getCurrentClientsById,
@@ -11,7 +9,6 @@ import {
   removeClient,
 } from "../../../store/clients";
 import { getCurrentTrainerData, logOut } from "../../../store/trainers";
-
 import CreateClient from "./createClient";
 import ClientList from "./clientList";
 import TrainerCard from "./trainerCard";
@@ -27,7 +24,7 @@ const TrainerPage = () => {
 
   const handleLogOut = () => {
     dispatch(logOut());
-    navigate("/about");
+    navigate("/workouts");
   };
   const clients = useSelector(getClientsById(currentTrainerId));
   const clientCurrentData = useSelector(getCurrentClientsById(currentClientId));

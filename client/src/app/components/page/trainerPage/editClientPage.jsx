@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
 import { updateClient } from "../../../store/clients";
-import ClientEditForm from "../../common/clientEditForm";
+import ClientEditForm from "../../ui/clientEditForm";
 const EditClientPage = ({
   clientCurrentData,
   showForm,

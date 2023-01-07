@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./clientCard.scss";
 import { NavLink } from "react-router-dom";
 const ClientCard = ({ client }) => {
   const clientId = client && client._id;

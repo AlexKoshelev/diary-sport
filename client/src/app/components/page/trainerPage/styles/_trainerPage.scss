@@ -1,0 +1,69 @@
+@import "../../../../../style/variables";
+.trainerPage{
+    width: 600px;
+    height: 100%;
+    margin: 0 auto;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    color:$MAIN_COLOR3_BOLD;
+    justify-content: center;
+}
+.trainerPage__main{
+    display: flex;
+}
+.createClient__container {
+    background-color: $MAIN_COLOR1;
+    border-radius: 10px;
+    
+}
+.hiddenForm{
+    display: none;
+}
+.trainerPage_button{
+   
+    background-color: $MAIN_COLOR2;
+    color: $MAIN_COLOR3;
+    
+}
+.main__btn{
+    justify-content: space-between;
+    display: flex;
+}
+.main__info{
+margin: 1em;
+}
+.clients__info{
+    margin: 0px;
+    padding: 0px;
+}
+.trainerPage_addbtn{
+    background-color: $MAIN_COLOR1;
+    color: $MAIN_COLOR3;
+   margin: 10px;
+   text-decoration:underline;
+}
+.clients__list{
+    margin: 5px;
+    font-size: 0.7rem;
+    background-color: $MAIN_COLOR1;
+    color: $MAIN_COLOR3;
+    padding: 3px 10px;
+    border-radius: 10px;
+    align-items: center;
+    vertical-align: middle;
+    display: flex;
+    justify-content: space-between;
+  
+}
+.client_button{
+background-color: $MAIN_COLOR1;
+vertical-align: middle;
+}
+.paginate__container{
+    display: flex;
+    justify-content: center;
+}
+.trainerPage_edit{
+    background-color:$MAIN_COLOR1;
+    border-radius: 10px;
+}

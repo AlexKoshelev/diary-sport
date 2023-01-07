@@ -1,5 +1,4 @@
 import React from "react";
-import "./workouts.scss";
 import AboutImg from "../../../assets/img/load.png";
 
 const Workouts = () => {
