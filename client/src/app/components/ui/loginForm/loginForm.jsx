@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Navigate, NavLink, useNavigate } from "react-router-dom";
-import { getAuthErrors, getIsLoggedIn, logIn } from "../../../store/trainers";
+import { NavLink, useNavigate } from "react-router-dom";
+import { getAuthErrors, logIn } from "../../../store/trainers";
 import { validator } from "../../../utils/validator";
 import TextField from "../../common/form/textField/textField";
 
@@ -13,10 +13,9 @@ const LoginForm = () => {
     email: "",
     password: "",
   });
+  console.log(loginError);
 
   const [errors, setErrors] = useState({});
-  const isLoggedIn = useSelector(getIsLoggedIn());
-  console.log(isLoggedIn);
 
   const handleChange = (target) => {
     setData((prevState) => ({
@@ -43,16 +42,18 @@ const LoginForm = () => {
   }, [data]);
   const validate = () => {
     const errors = validator(data, validatorConfig);
+    console.log(errors);
+
     setErrors(errors);
     return Object.keys(errors).length === 0;
   };
-  /*  const isValid = Object.keys(errors).length === 0; */
+  const isValid = Object.keys(errors).length === 0;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    /*     const isValid = validate();
-    if (!isValid) return; */
-    console.log(data);
+    const isValid = validate();
+    console.log(isValid);
+    if (!isValid) return;
 
     dispatch(logIn({ payload: data })).then(() => {
       navigate("/diary", { replace: true });
@@ -93,7 +94,7 @@ const LoginForm = () => {
           <button
             className="form__btn"
             type="submit"
-            /*   disabled={!isValid || loginError} */
+            disabled={!isValid || loginError}
           >
             Войти
           </button>

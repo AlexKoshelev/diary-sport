@@ -1,14 +1,11 @@
-$MAIN_COLOR1:#FDF5F4;
-$MAIN_COLOR2:#F4E1DD;
-$MAIN_COLOR3:#BD937B;
-$GOLD_COLOR:#B39365;
+@import "../../../../../../style/variables";
 
 .selectedField div{
     color: $MAIN_COLOR3;
     display: flex;
 }
 .selectedField option:active {
-background-color: #F4E1DD;
+background-color: $MAIN_COLOR2;
 }
 .form__label{
     display: flex;

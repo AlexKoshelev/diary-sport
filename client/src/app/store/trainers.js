@@ -110,6 +110,8 @@ export const logIn =
 
       console.log("вы вошли");
     } catch (error) {
+      console.log(error);
+
       const message = error.response.data.error.message;
       const code = error.response.data.error.code;
 

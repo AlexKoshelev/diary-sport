@@ -1,7 +1,4 @@
-$MAIN_COLOR1:#FDF5F4;
-$MAIN_COLOR2:#F4E1DD;
-$MAIN_COLOR3:#BD937B;
-$GOLD_COLOR:#B39365;
+@import "../../../../../../style/variables";
 .textfield {
     padding: 10px;
 }
@@ -11,7 +8,7 @@ $GOLD_COLOR:#B39365;
 }
 .form-control {
     font-size: 0.8rem;
-    color: #BD937B;
+    color: $MAIN_COLOR3;
     border-radius: 0.3rem;
     height: 2rem;
     width: 100%;
@@ -25,7 +22,7 @@ $GOLD_COLOR:#B39365;
     border-top-left-radius: 0.3rem;
     border-top-right-radius: 0rem;
     font-size: 0.8rem;
-    color: #BD937B;
+    color: $MAIN_COLOR3;
 
     height: 2rem;
     width: 100%;
@@ -34,18 +31,18 @@ $GOLD_COLOR:#B39365;
     padding: 0px 20px;
 } 
 .form-control::placeholder{
-    color: #BD937B;
+    color: $MAIN_COLOR3;
     font-size: 0.8rem;
     
 }
 .form-control:focus{
-    border: #B39365;
+    border: $GOLD_COLOR;
 }
 .logo__eye{
  margin-right: 20px;
 }
 .btn-outline-secondary {
-    background-color: #F4E1DD;
+    background-color: $MAIN_COLOR2;
     border-top-right-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
     
