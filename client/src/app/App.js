@@ -5,10 +5,10 @@ import NavBar from "./components/ui/navBar/navBar";
 import AppLoader from "./components/ui/hoc/appLoader";
 import routes from "./routes";
 import { loadClientsList } from "./store/clients";
-
 import { loadTrainersList } from "./store/trainers";
 import { loadworkoutsList } from "./store/workouts";
-
+import { ConfigProvider } from "antd";
+import ruRU from "antd/locale/ru_RU";
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -21,8 +21,10 @@ function App() {
   return (
     <>
       <AppLoader>
-        <NavBar />
-        {element}
+        <ConfigProvider locale={ruRU}>
+          <NavBar />
+          {element}
+        </ConfigProvider>
       </AppLoader>
     </>
   );

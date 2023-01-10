@@ -49,3 +49,62 @@ export function validator(data, config) {
   }
   return errors;
 }
+
+/* export const validator = (data, config) => {
+  const errors = {};
+  function validate(validateMethod, data, config) {
+    switch (validateMethod) {
+      case "isRequired":
+        if (data.toString().trim() === "") return config.message;
+        console.log(data);
+        break;
+      case "isEmail":
+        if (!/^\S+@\S+\.\S+$/g.test(data)) return config.message;
+        break;
+      case "isContainDigit":
+        if (!/\d/g.test(data)) return config.message;
+        break;
+      case "isContainCapitalSymbol":
+        if (!/[A-Z]/g.test(data)) return config.message;
+        break;
+      case "min":
+        if (data.length < config.params) return config.message;
+        break;
+      case "max":
+        if (data.length > config.params) return config.message;
+        break;
+      case "isEnd":
+        if (!/[A-Z]+/g.test(data)) return config.message;
+        break;
+      case "notThePast": {
+        if (data.toString().length) {
+          if (data.getTime() < config.params) {
+            return config.message;
+          }
+        }
+        break;
+      }
+      case "isCorrectDate": {
+        if (data.toString() === "Invalid Date") return config.message;
+        break;
+      }
+
+      default:
+        return config.message;
+    }
+  }
+  for (const fieldName in data) {
+    for (const validateMethod in config[fieldName]) {
+      const error = validate(
+        validateMethod,
+        data[fieldName],
+        config[fieldName][validateMethod]
+      );
+      if (!errors[fieldName] && error) {
+        errors[fieldName] = error;
+      }
+    }
+  }
+  return errors;
+};
+ */

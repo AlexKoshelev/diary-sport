@@ -9,6 +9,8 @@ const initialState = localStorageService.getAccessToken()
   ? {
       entities: null,
       isLoading: true,
+      signInError: null,
+      signUpError: null,
       errors: null,
       auth: { trainerId: localStorageService.getTrainerId() },
       isLoggedIn: true,
@@ -16,6 +18,8 @@ const initialState = localStorageService.getAccessToken()
     }
   : {
       entities: null,
+      signInError: null,
+      signUpError: null,
       isLoading: false,
       errors: null,
       auth: null,
@@ -69,6 +73,12 @@ const trainersSlice = createSlice({
       );
       state.entities[elementIndex] = action.payload;
     },
+    authSignInRequestFailed(state, action) {
+      state.signInError = action.payload;
+    },
+    authSignUpRequestFailed(state, action) {
+      state.signUpError = action.payload;
+    },
   },
 });
 
@@ -83,6 +93,8 @@ const {
   authRequestFailed,
   authRequestSucces,
   trainerLoggedOut,
+  authSignInRequestFailed,
+  authSignUpRequestFailed,
 } = actions;
 
 export const updateTrainer = (data) => async (dispatch) => {
@@ -103,23 +115,23 @@ export const logIn =
 
     dispatch(authRequested());
     try {
-      const data = await authService.login(email, password);
-
+      const data = await authService.login({ email, password });
       localStorageService.setTokens(data);
       dispatch(authRequestSucces({ trainerId: data.trainerId }));
 
       console.log("вы вошли");
-    } catch (error) {
-      console.log(error);
+    } catch (errors) {
+      console.log(errors);
 
-      const message = error.response.data.error.message;
-      const code = error.response.data.error.code;
+      const message = errors.response.data.error.message;
+      const code = errors.response.data.error.code;
+      console.log(message);
+      console.log(code);
 
       if (code === 400) {
-        const errorMessage = generateAuthError(message);
-        dispatch(authRequestFailed(errorMessage));
+        dispatch(authSignInRequestFailed(generateAuthError(message)));
       } else {
-        dispatch(authRequestFailed(error.message));
+        dispatch(authSignInRequestFailed(errors.message));
       }
     }
   };
@@ -180,6 +192,7 @@ export const getTrainers = () => (state) => state.trainers.entities;
 export const getTrainersLoadingStatus = () => (state) =>
   state.trainers.isLoading;
 export const getAuthErrors = () => (state) => state.trainers.errors;
+export const getAuthSignInError = () => (state) => state.trainers.signInError;
 export const getCurrentTrainerId = () => (state) =>
   state.trainers.auth.trainerId;
 export const getIsLoggedIn = () => (state) => state.trainers.isLoggedIn;

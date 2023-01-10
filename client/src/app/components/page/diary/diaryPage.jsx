@@ -11,7 +11,9 @@ import Comments from "../../common/comments/comments";
 import { Calendar } from "antd";
 import { ReactComponent as Bookmark } from "../../../assets/svg/around.svg";
 import ClientCard from "../../ui/clientCard/clientCard";
-
+import dayjs from "dayjs";
+import "dayjs/locale/ru";
+dayjs.locale("ru");
 const DiaryPage = () => {
   const currentTrainer = useSelector(getCurrentTrainerData());
   console.log(currentTrainer);

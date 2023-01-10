@@ -65,11 +65,12 @@ router.post("/signUp", [
 // 4. generate token
 // 5. return data
 router.post("/signInWithPassword", [
-  check("email", "Email некорректный").normalizeEmail().isEmail(),
+  check("email", "Eamil некорректный").normalizeEmail().isEmail(),
   check("password", "Пароль не может быть пустым").exists(),
   async (req, res) => {
     try {
       const errors = validationResult(req);
+
       if (!errors.isEmpty()) {
         return res.status(400).json({
           error: {
@@ -82,7 +83,7 @@ router.post("/signInWithPassword", [
       const { email, password } = req.body;
 
       const exitingTrainer = await Trainer.findOne({ email });
-
+      console.log(chalk.red(exitingTrainer));
       if (!exitingTrainer) {
         return res.status(400).send({
           error: {

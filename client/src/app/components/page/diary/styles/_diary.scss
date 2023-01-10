@@ -77,3 +77,58 @@ border-top: solid 2px $GOLD_COLOR;
     font-size: 1rem;
     margin: 0 40px;
 }
+:where(.css-dev-only-do-not-override-26rdvq).ant-picker-calendar.ant-picker-calendar-full .ant-picker-cell-selected .ant-picker-calendar-date .ant-picker-calendar-date-value, :where(.css-dev-only-do-not-override-26rdvq).ant-picker-calendar.ant-picker-calendar-full .ant-picker-cell-selected:hover .ant-picker-calendar-date .ant-picker-calendar-date-value, :where(.css-dev-only-do-not-override-26rdvq).ant-picker-calendar.ant-picker-calendar-full .ant-picker-cell-selected .ant-picker-calendar-date-today .ant-picker-calendar-date-value, :where(.css-dev-only-do-not-override-26rdvq).ant-picker-calendar.ant-picker-calendar-full .ant-picker-cell-selected:hover .ant-picker-calendar-date-today .ant-picker-calendar-date-value{
+    color: $GOLD_COLOR;
+}
+:where(.css-dev-only-do-not-override-26rdvq).ant-picker-calendar.ant-picker-calendar-full .ant-picker-cell-in-view:is(:where(.css-dev-only-do-not-override-26rdvq).ant-picker-calendar.ant-picker-calendar-full .ant-picker-cell-selected) .ant-picker-calendar-date, :where(.css-dev-only-do-not-override-26rdvq).ant-picker-calendar.ant-picker-calendar-full .ant-picker-cell-in-view:is(:where(.css-dev-only-do-not-override-26rdvq).ant-picker-calendar.ant-picker-calendar-full .ant-picker-cell-selected) .ant-picker-calendar-date-today {
+    background: $MAIN_COLOR2;
+}
+:where(.css-dev-only-do-not-override-26rdvq).ant-radio-button-wrapper-checked:not(:where(.css-dev-only-do-not-override-26rdvq).ant-radio-button-wrapper-disabled) {
+    color: $MAIN_COLOR3;
+    border-color: $MAIN_COLOR3 !important; 
+}
+:where(.css-dev-only-do-not-override-26rdvq).ant-radio-button-wrapper-checked:not(:where(.css-dev-only-do-not-override-26rdvq).ant-radio-button-wrapper-disabled):hover {
+    color: $GOLD_COLOR;
+    border-color: $GOLD_COLOR !important; 
+}
+.ant-select-selector >:hover{
+    color: $GOLD_COLOR;
+    border-color: $GOLD_COLOR !important; 
+}
+:where(.css-dev-only-do-not-override-26rdvq).ant-select:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector{
+    color: $MAIN_COLOR3;
+    border-color: $MAIN_COLOR3 !important; 
+}
+#root > div > div > div:nth-child(2) > div.calendar__container > div > div.ant-picker-calendar-header > div.ant-select.ant-picker-calendar-month-select.css-dev-only-do-not-override-26rdvq.ant-select-single.ant-select-show-arrow.ant-select-open{
+    border-color:$MAIN_COLOR3  !important;
+}
+.ant-select.ant-picker-calendar-month-select.css-dev-only-do-not-override-26rdvq.ant-select-focused.ant-select-single.ant-select-single.ant-select-show-arrow.ant-select-open{
+    border-color: $MAIN_COLOR3  !important;
+}
+
+.ant-select-selector{
+    border-color: $MAIN_COLOR3  !important;
+}
+.ant-radio-button-wrapper.css-dev-only-do-not-override-26rdvq:hover{
+    color: $MAIN_COLOR3;
+}
+:where(.css-dev-only-do-not-override-26rdvq).ant-radio-button-wrapper-checked:not(:where(.css-dev-only-do-not-override-26rdvq).ant-radio-button-wrapper-disabled)::before{
+    background-color: $MAIN_COLOR3;
+}
+.ant-select-item.ant-select-item-option.ant-select-item-option-active.ant-select-item-option-selected{
+    background-color: $MAIN_COLOR2;
+}
+.ant-select-item.ant-select-item-option.ant-select-item-option-selected{
+    background-color: $MAIN_COLOR2;
+}
+.ant-select-selection-item{
+    color: $MAIN_COLOR3;
+}
+.ant-radio-button-wrapper.css-dev-only-do-not-override-26rdvq{
+    color: $MAIN_COLOR3;
+}
+.ant-picker-content th{
+    color: $MAIN_COLOR3_BOLD !important;
+    text-align: center;
+    padding: 5px 0px !important;
+}
