@@ -9,10 +9,10 @@ import {
   removeClient,
 } from "../../../store/clients";
 import { getCurrentTrainerData, logOut } from "../../../store/trainers";
-import CreateClient from "./createClient";
-import ClientList from "./clientList";
+import CreateClient from "../../ui/createClient/createClient";
+import ClientList from "../../ui/clientList/clientList";
 import TrainerCard from "./trainerCard";
-import EditClientPage from "./editClientPage";
+import EditClientPage from "../editClientPage/editClientPage";
 
 const TrainerPage = () => {
   const navigate = useNavigate();

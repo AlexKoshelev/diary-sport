@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { createClients } from "../../../store/clients";
 import PropTypes from "prop-types";
-import ClientForm from "../../ui/clientForm";
+import ClientForm from "../clientForm";
 
 const CreateClient = ({ currentTrainer, hiddenState, setHiddenState }) => {
   const dispatch = useDispatch();
