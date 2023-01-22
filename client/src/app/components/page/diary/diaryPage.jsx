@@ -13,6 +13,7 @@ import { ReactComponent as Bookmark } from "../../../assets/svg/around.svg";
 import ClientCard from "../../ui/clientCard/clientCard";
 import dayjs from "dayjs";
 import "dayjs/locale/ru";
+import TrainingInfo from "../../ui/trainingInfo/TrainingInfo";
 dayjs.locale("ru");
 const DiaryPage = () => {
   const currentTrainer = useSelector(getCurrentTrainerData());
@@ -90,12 +91,18 @@ const DiaryPage = () => {
                     className="select-client"
                     client={selectClientId}
                   />
-                  <Table
+                  <TrainingInfo
                     currentClientId={selectClientId}
                     cardioTime={cardioTime}
                     workoutNumber={workoutNumber}
                     dateToday={dateToday}
                   />
+                  {/* <Table
+                    currentClientId={selectClientId}
+                    cardioTime={cardioTime}
+                    workoutNumber={workoutNumber}
+                    dateToday={dateToday}
+                  /> */}
                 </div>
               </div>
               {selectClientId && dateToday && (

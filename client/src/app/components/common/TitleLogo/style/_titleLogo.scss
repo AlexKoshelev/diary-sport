@@ -1,0 +1,25 @@
+@import "../../../../../style/variables";
+.titleLogo__container{
+    display: flex;
+    position: relative;
+    padding-bottom: 70px;
+    justify-content: center;
+    margin: 40px 0px;
+    
+}
+.titleLogo__container-title{
+    color: $MAIN_COLOR4;
+    font-size: 2rem;
+    font-style: italic;
+    position: absolute;
+    z-index: 2;
+    
+}
+.titleLogo__container-logo{
+    position: absolute;
+    z-index: 1;
+}
+.logo{
+
+
+}

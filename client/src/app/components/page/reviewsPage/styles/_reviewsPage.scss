@@ -1,1 +1,21 @@
 @import "../../../../../style/variables";
+.image-slider-container{
+    display: flex;
+    justify-content: center;
+
+}
+.image-slider__image{
+    margin: 0 auto;
+    text-align: center;
+    width: 350px; 
+    margin: 30px;
+
+}
+
+.swiper-button-next:after,.swiper-button-prev:after{
+    color: $MAIN_COLOR3;
+    
+}
+.image-slider__image-flex{
+    display: flex
+}
