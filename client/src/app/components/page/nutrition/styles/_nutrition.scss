@@ -1,1 +1,41 @@
 @import "../../../../../style/variables";
+
+.image__container{
+    background-color: #FDFEEC;
+    &-image{
+        max-width: 647px;
+        max-height: 600px;
+        margin: 20px 20px 30px 20px;
+    }
+   
+}
+
+
+.nutrition__container{
+    display: flex;
+    background-color: #BD937A;
+    color: #FDFEEC;
+    &-logo{
+        margin: 0 auto;
+    }
+}
+.title__container{
+    max-width: 600px;
+    text-align: center;
+    margin: 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    h2 {
+        font-size: 2.6rem;
+        margin: 40px 0px;
+    }
+    h1 {
+        font-size: 2.8rem;
+        margin: 40px 0px;
+    }
+    h3{
+        font-size: 1.5rem;
+        margin: 40px 0px;
+    }
+}
