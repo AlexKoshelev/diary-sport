@@ -28,12 +28,14 @@ const ImageSlider = ({ className, slides, ...rest }) => {
           keyboard={{ enabled: true }}
           className="mySwiper"
           effect={"cube"}
-          cubeEffect={{
-            slideShadows: true,
-            shadow: true,
-            shadowOffset: true,
-            shadowScale: true,
-          }}
+          cubeEffect={
+            {
+              /*  slideShadows: true, */
+              /*  shadow: true, */
+              /*  shadowOffset: true, */
+              /*   shadowScale: true, */
+            }
+          }
           mousewheel={true}
           loop={true}
           {...rest}
