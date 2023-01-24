@@ -1,4 +1,12 @@
 @import "../../../../../style/variables";
-.about_img{
-    width: 100%;
+.about__container{
+    display: flex;
+    color: $MAIN_COLOR3_BOLD;
+    &-image{
+        max-width: 800px;
+        max-height: auto;
+    }
+    &-text{
+        
+    }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Logo from "../assets/img/logo.png";
 
+import { ReactComponent as Logo } from "../assets/svg/logo.svg";
 const Login = () => {
   return (
     <>
@@ -9,7 +9,7 @@ const Login = () => {
       <div className="form">
         <div className="form__wrapper">
           <div className="form__logo">
-            <img src={Logo} alt="Логотип"></img>
+            <Logo />
           </div>
           <Outlet />
         </div>
