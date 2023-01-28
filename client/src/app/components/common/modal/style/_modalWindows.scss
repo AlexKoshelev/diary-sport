@@ -1,0 +1,53 @@
+@import "../../../../../style/variables";
+.modalBtn{
+    cursor: pointer;
+}
+.modalWindows{
+    background-color: $MAIN_COLOR1;
+}
+:where(.css-dev-only-do-not-override-26rdvq).ant-modal .ant-modal-content{
+    background-color: $MAIN_COLOR1 ;
+    max-width: 350px;
+    border-radius: 10px;
+    border:solid 0.5px $GOLD_COLOR;
+}
+:where(.css-dev-only-do-not-override-26rdvq).ant-modal{
+    padding-bottom: 0px;
+    border-radius: 10px;
+    border:solid 0.5px $GOLD_COLOR;
+    max-width: 350px;
+}
+.modalWindows__formContainer{
+   /*  display: flex; */
+}
+:where(.css-dev-only-do-not-override-26rdvq).ant-btn-primary{
+  
+background-color: $MAIN_COLOR2;
+color: $MAIN_COLOR3;
+}
+:where(.css-dev-only-do-not-override-26rdvq).ant-btn-primary:hover{
+    background-color: $MAIN_COLOR2;
+    color: $MAIN_COLOR3;
+    }
+:where(.css-dev-only-do-not-override-26rdvq)[ant-click-animating-without-extra-node='true'], :where(.css-dev-only-do-not-override-26rdvq)[ant-click-animating='true']{
+    background-color: $MAIN_COLOR3 !important;
+    color: $MAIN_COLOR1 !important;
+   
+}
+.ant-btn.css-dev-only-do-not-override-26rdvq.ant-btn-default{
+    border-color: $MAIN_COLOR3;
+    color: $MAIN_COLOR3;
+}
+.ant-btn.css-dev-only-do-not-override-26rdvq.ant-btn-default:hover{
+    border-color: $MAIN_COLOR1;
+    background-color: $MAIN_COLOR2;
+    color: $MAIN_COLOR3;
+}
+.ant-btn.css-dev-only-do-not-override-26rdvq.ant-btn-primary:hover{
+    background-color: $MAIN_COLOR1;
+    border-color: $MAIN_COLOR3;
+    color: $MAIN_COLOR3;
+}
+.ant-modal-close-x{
+    color: $MAIN_COLOR3;
+}

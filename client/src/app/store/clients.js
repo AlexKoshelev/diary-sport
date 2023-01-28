@@ -50,9 +50,6 @@ const {
 } = actions;
 
 export const updateClient = (id, data) => async (dispatch) => {
-  console.log(id);
-  console.log(data);
-
   try {
     const content = await clientsService.update(id, data);
 
@@ -82,7 +79,6 @@ export const createClients = (payload) => async (dispatch) => {
   }
 };
 export const removeClient = (_id) => async (dispatch) => {
-  console.log(_id);
   try {
     const content = await clientsService.removeClient(_id);
     if (content === null) {
@@ -101,8 +97,6 @@ export const getClients = () => (state) => state.clients.entities;
 
 export const getClientsLoadingStatus = () => (state) => state.clients.isLoading;
 export const getClientsById = (id) => (state) => {
-  console.log(state);
-
   if (state.clients.entities && state.clients.entities !== undefined) {
     return state.clients.entities.filter((client) => client.trainerId === id);
   }

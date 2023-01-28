@@ -13,11 +13,11 @@ import { ReactComponent as Bookmark } from "../../../assets/svg/around.svg";
 import ClientCard from "../../ui/clientCard/clientCard";
 import dayjs from "dayjs";
 import "dayjs/locale/ru";
-import TrainingInfo from "../../ui/trainingInfo/TrainingInfo";
+import TrainingForm from "../../ui/trainingForm/TrainingForm";
+import Training from "../../ui/trainingForm/Training";
 dayjs.locale("ru");
 const DiaryPage = () => {
   const currentTrainer = useSelector(getCurrentTrainerData());
-  console.log(currentTrainer);
 
   const clients = useSelector(getClientsById(currentTrainer._id));
   const [selectClientId, setSectClientId] = useState("");
@@ -60,7 +60,6 @@ const DiaryPage = () => {
 
     const selectDate = `${day}.${month}.${String(year).substr(2, 2)}`;
     setSelectedDate(selectDate);
-    console.log(selectDate);
   };
   const handleBookmark = (date) => {
     const day = date.$D;
@@ -91,12 +90,13 @@ const DiaryPage = () => {
                     className="select-client"
                     client={selectClientId}
                   />
-                  <TrainingInfo
+                  <Training />
+                  {/* <TrainingForm
                     currentClientId={selectClientId}
                     cardioTime={cardioTime}
                     workoutNumber={workoutNumber}
                     dateToday={dateToday}
-                  />
+                  /> */}
                   {/* <Table
                     currentClientId={selectClientId}
                     cardioTime={cardioTime}

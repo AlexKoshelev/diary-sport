@@ -2,9 +2,10 @@
 @import "../../app/components/ui/loginForm/styles/loginForm";
 @import "../../app/components/ui/registerForm/styles/registerForm";
 /* @import "../../app/components/ui/table/styles/table"; */
-@import "../../app/components/ui/trainingInfo/style/trainingInfo";
+@import "../../app/components/ui/trainingForm/style/trainingForm";
 @import "../../app/components/ui/trainersCard/styles/trainersCard";
 @import "../../app/components/ui/navBar/styles/navBar"; 
+@import "../../app/components/ui/hoc/style/appLoader";
 
 @import "../../app/components/page/about/styles/about";
 @import "../../app/components/page/clientPage/styles/clientPage";
@@ -14,6 +15,7 @@
 @import "../../app/components/page/trainerPage/styles/trainerPage";
 @import "../../app/components/page/workouts/styles/workouts";
 
+@import "../../app/components/common/modal/style/modalWindows";
 @import "../../app/components/common/pagination/styles/pagination";
 @import "../../app/components/common/form/radioField/styles/radioField";
 @import "../../app/components/common/form/selectField/styles/selectField";

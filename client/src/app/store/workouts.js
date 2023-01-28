@@ -49,9 +49,6 @@ const {
 } = actions;
 
 export const updateWorkout = (id, data) => async (dispatch) => {
-  console.log(id);
-  console.log(data);
-
   try {
     const content = await workoutsService.update(id, data);
 
@@ -64,7 +61,6 @@ export const loadworkoutsList = () => async (dispatch) => {
   dispatch(workoutsRequested());
   try {
     const content = await workoutsService.fetchAll();
-    console.log(content);
 
     dispatch(workoutsReceved(content));
   } catch (error) {
@@ -72,8 +68,6 @@ export const loadworkoutsList = () => async (dispatch) => {
   }
 };
 export const createWorkouts = (workout) => async (dispatch) => {
-  console.log(workout);
-
   try {
     const content = await workoutsService.createWorkouts(workout);
     console.log(content);
@@ -84,7 +78,6 @@ export const createWorkouts = (workout) => async (dispatch) => {
   }
 };
 export const removeWorkout = (_id) => async (dispatch) => {
-  console.log(_id);
   try {
     const content = await workoutsService.removeWorkout(_id);
     if (content === null) {

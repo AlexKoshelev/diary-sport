@@ -13,6 +13,7 @@ const TextField = ({
   placeholder,
   className,
   inputClassName,
+  onKeyDown,
 }) => {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -42,6 +43,7 @@ const TextField = ({
                 name={name}
                 value={value}
                 onChange={handleChange}
+                onKeyDown={onKeyDown}
                 className={
                   type !== "password"
                     ? getInputClasses()
@@ -76,6 +78,7 @@ const TextField = ({
                 name={name}
                 value={value}
                 onChange={handleChange}
+                onKeyDown={onKeyDown}
                 className={
                   type !== "password"
                     ? getInputClasses()
@@ -114,6 +117,7 @@ TextField.propTypes = {
   name: PropTypes.string,
   value: PropTypes.string,
   onChange: PropTypes.func,
+  onKeyDown: PropTypes.func,
   error: PropTypes.string,
   className: PropTypes.string,
   inputClassName: PropTypes.string,

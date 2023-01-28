@@ -1,0 +1,87 @@
+@import "../../../../../style/variables";
+.trainingInfo__container{
+    background-color: $MAIN_COLOR1;
+    color: $GOLD_COLOR;
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    form{
+      display: flex;
+      
+    }
+    
+      &-form{
+        
+         background-image: repeating-linear-gradient(193deg, #bd937a, #bd937a 11px, transparent 11px, transparent 21px, #bd937a 21px), repeating-linear-gradient(283deg, #bd937a, #bd937a 11px, transparent 11px, transparent 21px, #bd937a 21px), repeating-linear-gradient(13deg, #bd937a, #bd937a 11px, transparent 11px, transparent 21px, #bd937a 21px), repeating-linear-gradient(103deg, #bd937a, #bd937a 11px, transparent 11px, transparent 21px, #bd937a 21px);
+         background-size: 0, 0, 0 , 100% 1px;
+         background-position: 0 0, 0 0, 100% 0, 0 100%;
+         background-repeat: no-repeat;
+         
+      }
+    ::-webkit-input-placeholder { /* WebKit browsers */
+        color:  $MAIN_COLOR3;
+     }
+     :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color:    $MAIN_COLOR3;
+     }
+     ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color:    $MAIN_COLOR3;
+     }
+     :-ms-input-placeholder { /* Internet Explorer 10+ */
+        color:    $MAIN_COLOR3;
+     }
+}
+.trainingInfo{
+    &-textField{
+        background-color: $MAIN_COLOR1;
+        width:215px;
+        border-bottom: solid 1px $MAIN_COLOR3;
+    }
+    &-addBtn{
+       background-color: $MAIN_COLOR1;
+       margin-top: 1px;
+       margin-bottom: 1px;
+ 
+    }
+}
+.exercises__container{
+   display: flex;
+   padding: 20px;
+   color: $MAIN_COLOR3;
+   width: 235px;
+   font-size: 1rem;
+   border-right: solid 1px rgb(189, 147, 122, 0.3);
+   &-exercise{
+         width: 100%;
+         display: flex;
+         justify-content: space-between;
+         margin-top:10px;
+         background-image: repeating-linear-gradient(193deg, #bd937a, #bd937a 11px, transparent 11px, transparent 21px, #bd937a 21px), repeating-linear-gradient(283deg, #bd937a, #bd937a 11px, transparent 11px, transparent 21px, #bd937a 21px), repeating-linear-gradient(13deg, #bd937a, #bd937a 11px, transparent 11px, transparent 21px, #bd937a 21px), repeating-linear-gradient(103deg, #bd937a, #bd937a 11px, transparent 11px, transparent 21px, #bd937a 21px);
+         background-size: 0, 0, 0 , 100% 1px;
+         background-position: 0 0, 0 0, 100% 0, 0 100%;
+         background-repeat: no-repeat;
+         padding-bottom: 10px;
+        
+     
+   }
+   &-approach{
+      padding: 20px;
+      margin-top: 10px;
+      font-size: 1rem;
+      color: $MAIN_COLOR3     
+   }
+
+}
+.exercise{
+   &-title{
+      overflow: hidden;
+   }
+   &-logo{
+      margin-left: 10px;
+      cursor: pointer;
+   }
+}
+.trainingRow__container{
+   display: flex;
+   
+}
