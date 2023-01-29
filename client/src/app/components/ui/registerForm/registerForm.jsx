@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Navigate, NavLink, useNavigate } from "react-router-dom";
-import { getAuthErrors, getIsLoggedIn, signUp } from "../../../store/trainers";
+import { NavLink, useNavigate } from "react-router-dom";
+import { getIsLoggedIn, signUp } from "../../../store/trainers";
 import { validator } from "../../../utils/validator";
 import RadioField from "../../common/form/radioField/radioField";
 import TextField from "../../common/form/textField/textField";
 
 const RegisterForm = () => {
   const dispatch = useDispatch();
-  const loginError = useSelector(getAuthErrors());
+
   const navigate = useNavigate();
   const [data, setData] = useState({
     email: "",

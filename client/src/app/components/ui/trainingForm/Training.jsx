@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import TrainingForm from "./TrainingForm";
 import { nanoid } from "nanoid";
 import PropTypes from "prop-types";
+import { useDispatch } from "react-redux";
+import { createWorkouts } from "../../../store/workouts";
 const Training = ({
   setSectClientId,
   currentClientId,
@@ -9,23 +11,26 @@ const Training = ({
   workoutNumber,
   dateToday,
 }) => {
+  const dispatch = useDispatch();
   const [exercises, setExercise] = useState("");
-  const [workout, setWorkot] = useState({
-    id: currentClientId,
-    cardioTime,
-    workoutNumber,
-    dateToday,
+  const [workout, setWorkout] = useState({
+    clientId: currentClientId,
+    cardio: cardioTime,
+    date: dateToday,
     exercises,
   });
-  console.log(workout);
+
   const addWorkout = () => {
-    setWorkot({
-      id: currentClientId,
-      cardioTime,
-      workoutNumber,
-      dateToday,
+    setWorkout({
+      clientId: currentClientId,
+      cardio: cardioTime,
+      date: dateToday,
       exercises,
     });
+    const newWorkout = { ...workout, _id: nanoid() };
+    console.log(newWorkout);
+
+    dispatch(createWorkouts(newWorkout));
     setSectClientId("");
     setExercise("");
   };

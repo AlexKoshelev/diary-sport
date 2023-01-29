@@ -4,7 +4,7 @@ import TextField from "../../common/form/textField/textField";
 import { ReactComponent as AddBtn } from "../../../assets/svg/addsquare.svg";
 import { useState } from "react";
 import TrainingRow from "./TrainingRow";
-import ModalWindows from "../../common/modal/ModalWindows";
+import ModalWindows from "../modal/ModalWindows";
 import { useEffect } from "react";
 
 const TrainingForm = ({
@@ -45,7 +45,6 @@ const TrainingForm = ({
     const exerciseId = modalId;
     setApproachInput((prevState) => ({ ...prevState, exerciseId }));
   }, [modalId]);
-  console.log(approachInput);
   const handleChangeModal = (e) => {
     setApproachInput((prevState) => ({ ...prevState, [e.name]: e.value }));
   };
@@ -54,8 +53,6 @@ const TrainingForm = ({
     setExercise(
       exercises.map((exercise) => {
         if (exercise.id === approachInput.exerciseId) {
-          console.log(exercise.id);
-          console.log(modalId);
           setModalId("");
           const newApproach = [...exercise.approach, approachInput];
           return {
@@ -70,7 +67,6 @@ const TrainingForm = ({
 
     setApproachInput({ weight: "", repeat: "", exerciseId: "" });
   };
-  console.log(currentClientId);
 
   return (
     <>

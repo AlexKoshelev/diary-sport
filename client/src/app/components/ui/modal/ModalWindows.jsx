@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Modal } from "antd";
 import { ReactComponent as AddLogo } from "../../../assets/svg/plus.svg";
 import PropTypes from "prop-types";
-import TextField from "../form/textField/textField";
+import TextField from "../../common/form/textField/textField";
 
 const ModalWindows = ({
   exercise,
@@ -30,8 +30,8 @@ const ModalWindows = ({
     <div className="modalMindows__container">
       <div className="trainingRow__container-approach">
         {exercise.approach
-          ? exercise.approach.map((ap) => (
-              <div className="approach__cell">
+          ? exercise.approach.map((ap, index) => (
+              <div key={index} className="approach__cell">
                 <div className="approach__cell-weight">{ap.weight}</div>
                 <div className="approach__cell-repeat">{ap.repeat}</div>
               </div>
