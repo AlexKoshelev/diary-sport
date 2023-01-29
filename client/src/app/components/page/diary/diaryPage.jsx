@@ -5,7 +5,6 @@ import { getClientsById } from "../../../store/clients";
 import { getCurrentTrainerData } from "../../../store/trainers";
 import { getWorkoutsById } from "../../../store/workouts";
 import { transformDate } from "../../../utils/transformDate";
-import Table from "../../ui/table/table";
 import TrainersCard from "../../ui/trainersCard/trainersCard";
 import Comments from "../../common/comments/comments";
 import { Calendar } from "antd";
@@ -13,7 +12,6 @@ import { ReactComponent as Bookmark } from "../../../assets/svg/around.svg";
 import ClientCard from "../../ui/clientCard/clientCard";
 import dayjs from "dayjs";
 import "dayjs/locale/ru";
-import TrainingForm from "../../ui/trainingForm/TrainingForm";
 import Training from "../../ui/trainingForm/Training";
 dayjs.locale("ru");
 const DiaryPage = () => {
@@ -74,8 +72,8 @@ const DiaryPage = () => {
   };
   return (
     <>
-      {currentTrainer /* && clients */ && (
-        <div className="_container">
+      {currentTrainer && (
+        /* clients && selectClientId  */ <div className="_container">
           <div className="diary__layout">
             <div className="table__group">
               <div className="diary__trainer diary-container">
@@ -90,19 +88,14 @@ const DiaryPage = () => {
                     className="select-client"
                     client={selectClientId}
                   />
-                  <Training />
-                  {/* <TrainingForm
+
+                  <Training
+                    setSectClientId={setSectClientId}
                     currentClientId={selectClientId}
                     cardioTime={cardioTime}
                     workoutNumber={workoutNumber}
                     dateToday={dateToday}
-                  /> */}
-                  {/* <Table
-                    currentClientId={selectClientId}
-                    cardioTime={cardioTime}
-                    workoutNumber={workoutNumber}
-                    dateToday={dateToday}
-                  /> */}
+                  />
                 </div>
               </div>
               {selectClientId && dateToday && (
@@ -113,7 +106,7 @@ const DiaryPage = () => {
               )}
             </div>
             <div>
-              <div className="calendar__container">
+              <div key={"cal"} className="calendar__container">
                 <Calendar
                   onSelect={(date) => hahdleSelectDate(date)}
                   dateCellRender={(date) => handleBookmark(date)}
