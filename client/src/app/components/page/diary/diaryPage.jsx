@@ -53,10 +53,9 @@ const DiaryPage = () => {
     setCardioTime(value);
   };
   const [selectedDate, setSelectedDate] = useState("");
-  const selectedWorkout = currentClientWorkoutsList.find(
-    (w) => w.date === selectedDate
-  );
-  console.log(selectedWorkout);
+  const selectedWorkout =
+    currentClientWorkoutsList &&
+    currentClientWorkoutsList.find((w) => w.date === selectedDate);
 
   const hahdleSelectDate = (date) => {
     const day = date.$D;
