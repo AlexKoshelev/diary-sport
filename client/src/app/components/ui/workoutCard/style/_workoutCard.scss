@@ -1,0 +1,9 @@
+@import "../../../../../style/variables";
+.workoutCard__container{
+    margin: 40px;
+    color: $MAIN_COLOR3;
+    font-size: 1rem;
+    &-date{
+        margin: 10px 0px;
+    }
+}

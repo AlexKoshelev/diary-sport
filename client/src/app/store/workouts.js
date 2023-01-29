@@ -68,11 +68,8 @@ export const loadworkoutsList = () => async (dispatch) => {
   }
 };
 export const createWorkouts = (workout) => async (dispatch) => {
-  console.log(workout);
-
   try {
     const content = await workoutsService.createWorkouts(workout);
-    console.log(content);
 
     dispatch(workoutsCreated(workout));
   } catch (error) {

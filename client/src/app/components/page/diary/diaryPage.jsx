@@ -13,6 +13,7 @@ import ClientCard from "../../ui/clientCard/clientCard";
 import dayjs from "dayjs";
 import "dayjs/locale/ru";
 import Training from "../../ui/trainingForm/Training";
+import WorkoutCard from "../../ui/workoutCard/WorkoutCard";
 dayjs.locale("ru");
 const DiaryPage = () => {
   const currentTrainer = useSelector(getCurrentTrainerData());
@@ -28,6 +29,8 @@ const DiaryPage = () => {
   const currentClientWorkoutsList = useSelector(
     getWorkoutsById(selectClientId)
   );
+  console.log(currentClientWorkoutsList);
+
   let numAllWorkouts =
     currentClientWorkoutsList && currentClientWorkoutsList.length;
 
@@ -50,6 +53,10 @@ const DiaryPage = () => {
     setCardioTime(value);
   };
   const [selectedDate, setSelectedDate] = useState("");
+  const selectedWorkout = currentClientWorkoutsList.find(
+    (w) => w.date === selectedDate
+  );
+  console.log(selectedWorkout);
 
   const hahdleSelectDate = (date) => {
     const day = date.$D;
@@ -61,19 +68,24 @@ const DiaryPage = () => {
   };
   const handleBookmark = (date) => {
     const day = date.$D;
-    const month = date.$M + 1;
+
+    let month = date.$M + 1;
+
     const year = date.$y;
 
     const DATE = `${day}.${month}.${String(year).substr(2, 2)}`;
+
     if (currentClientWorkoutsList)
       return currentClientWorkoutsList.map((w) =>
-        w.date === DATE ? <Bookmark className="calendar-icon" /> : null
+        w.date === DATE ? (
+          <Bookmark key={DATE} className="calendar-icon" />
+        ) : null
       );
   };
   return (
     <>
       {currentTrainer && (
-        /* clients && selectClientId  */ <div className="_container">
+        <div className="_container">
           <div className="diary__layout">
             <div className="table__group">
               <div className="diary__trainer diary-container">
@@ -104,6 +116,9 @@ const DiaryPage = () => {
                   dateToday={dateToday}
                 />
               )}
+              {selectedWorkout ? (
+                <WorkoutCard workout={selectedWorkout} />
+              ) : null}
             </div>
             <div>
               <div key={"cal"} className="calendar__container">

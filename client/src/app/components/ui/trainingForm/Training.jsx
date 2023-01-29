@@ -8,17 +8,17 @@ const Training = ({
   setSectClientId,
   currentClientId,
   cardioTime,
-  workoutNumber,
   dateToday,
 }) => {
   const dispatch = useDispatch();
   const [exercises, setExercise] = useState("");
   const [workout, setWorkout] = useState({
     clientId: currentClientId,
-    cardio: cardioTime,
-    date: dateToday,
-    exercises,
+    cardio: "",
+    date: "",
+    exercises: "",
   });
+  console.log(currentClientId);
 
   const addWorkout = () => {
     setWorkout({
@@ -67,7 +67,6 @@ Training.propTypes = {
   setSectClientId: PropTypes.string,
   currentClientId: PropTypes.string,
   cardioTime: PropTypes.string,
-  workoutNumber: PropTypes.number,
   dateToday: PropTypes.string,
 };
 export default Training;
