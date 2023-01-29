@@ -1,5 +1,4 @@
 import { Navigate } from "react-router-dom";
-import About from "./components/page/about/about";
 import ClientPage from "./components/page/clientPage/clientPage";
 import DiaryPage from "./components/page/diary/diaryPage";
 
@@ -16,7 +15,7 @@ import Login from "./layouts/login";
 const routes = () => [
   {
     path: "",
-    element: <About />,
+    element: <Workouts />,
   },
   {
     path: "diary",
@@ -40,10 +39,7 @@ const routes = () => [
     path: "nutrition",
     element: <Nutrition />,
   },
-  {
-    path: "workouts",
-    element: <Workouts />,
-  },
+
   {
     path: "trainerPage",
     element: <TrainerPage />,

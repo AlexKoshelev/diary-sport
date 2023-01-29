@@ -53,23 +53,14 @@ const NavBar = () => {
                 className={({ isActive }) =>
                   isActive ? "header__item-active" : ""
                 }
-                to="/workouts"
+                to="/"
               >
                 Тренировки
               </NavLink>
             </div>
+
             <div className="header__item">
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "header__item-active" : ""
-                }
-                to="/"
-              >
-                Ваш тренер
-              </NavLink>
-            </div>
-            <div className="header__item">
-              {currentTrainer /* && currentTrainer !== ""  */ ? (
+              {currentTrainer ? (
                 <NavLink
                   className={({ isActive }) =>
                     isActive ? "header__item-active" : ""
