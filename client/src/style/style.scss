@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 @import "./_variables.scss";
 @import "./components/index.scss";
- 
+@import "./mixins/response-mixin.scss";
 /*Обнуление*/
 
 *{
@@ -46,6 +46,15 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     margin: 0px auto; /*выравнивает контейнер по середине (для ограниченных по ширине блоков)*/
     box-sizing: content-box;
     padding: 0 15px;
+	/* @include laptop {
+		width: 992px;
+	}
+	@include tablets {
+		width: 768px;
+	}
+	@include phones {
+		width: 480px;
+	} */
 }
 
 body{

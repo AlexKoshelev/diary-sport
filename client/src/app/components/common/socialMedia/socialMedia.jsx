@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import { ReactComponent as InstLogo } from "../../../assets/svg/instagram.svg";
 import { ReactComponent as TelegramLogo } from "../../../assets/svg/telegram.svg";
 import { ReactComponent as WhatsLogo } from "../../../assets/svg/whatsapp.svg";
-const SocialMedia = ({ instLink, telegramLink, whatsLink }) => {
+const SocialMedia = ({ instLink, telegramLink, whatsLink, className }) => {
   return (
-    <div>
+    <div className={className}>
       <a
         href={`https://www.instagram.com/${instLink}`}
         target="_blank"
@@ -37,6 +37,7 @@ const SocialMedia = ({ instLink, telegramLink, whatsLink }) => {
   );
 };
 SocialMedia.propTypes = {
+  className: PropTypes.string,
   instLink: PropTypes.string.isRequired,
   telegramLink: PropTypes.string.isRequired,
   whatsLink: PropTypes.string.isRequired,
