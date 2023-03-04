@@ -102,7 +102,6 @@ const NavBar = () => {
               <Burger width="45px" height="30px" />
             )}
           </div>
-          <div className="burger"></div>
         </div>
       </header>
     </>
