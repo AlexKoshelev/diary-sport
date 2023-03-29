@@ -1,0 +1,47 @@
+@import "../../../../../../style/variables";
+
+.calendarGrid__wrapper{
+    display: grid;
+    background-color: $MAIN_COLOR1;
+    color: $MAIN_COLOR3;
+    width: 100%;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(6,1fr);
+
+}
+.calendarCell{
+    min-height: 80px;
+    min-width: 140px;
+    outline: 1px solid $MAIN_COLOR2;
+    padding: 1px;
+    &-row{
+        display: flex;
+        justify-content: flex-end;
+    }
+    &-day{
+        height: 33px;
+        width:  33px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2px;
+        
+     
+        &-currentDay{
+              background-color: rgba(245, 198, 189, 0.5);
+            border-radius: 50%;
+            
+          height: 100%;
+            width: 100%; 
+
+            display: flex;
+            align-items: center;
+            justify-content: center;  
+        }
+    }
+    
+}
+.isWeekend{
+    background-color: rgb(252, 238, 235);
+    outline-color: #e0cbc7;
+}

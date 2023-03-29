@@ -1,0 +1,32 @@
+.monitor__wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+    background-color: $MAIN_COLOR1;
+    &-date{
+        display: flex;
+
+    }
+    &-date span:first-child{
+        font-style: italic;
+        font-weight: 500;
+        margin-right: 8px;
+    }
+    &-control{
+        display: flex;
+        align-items: center;
+        button{
+            border: unset;
+            border-radius: 4px;
+            margin-right: 2px;
+            padding: 2px;
+            background-color: rgba(248, 200, 192, 0.32);
+            color: $MAIN_COLOR3_BOLD;
+        }
+        button:nth-child(2){
+            font-weight: 500;
+            padding: 2px 12px;
+   
+        }
+    }
+}

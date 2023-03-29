@@ -1,246 +1,180 @@
 import React from "react";
-import Work1 from "../../../assets/img/workouts/work1.jpeg";
-import Work2 from "../../../assets/img/workouts/work2.JPG";
-import Work3 from "../../../assets/img/workouts/work3.JPG";
-import { ReactComponent as CheckMark } from "../../../assets/svg/checkMark.svg";
-import ImageSlider from "../../common/ImageSlider/ImageSlider";
-import TitleLogo from "../../common/TitleLogo/TitleLogo";
-import Item1 from "../../../assets/img/rewies/rewImg4.jfif";
-import Item2 from "../../../assets/img/rewies/rewImg6.jfif";
-import Item3 from "../../../assets/img/rewies/rewImg5.jfif";
-import Item4 from "../../../assets/img/rewies/rewImg7.jfif";
-import Item5 from "../../../assets/img/rewies/rewImg2.jfif";
-import Item6 from "../../../assets/img/rewies/rewImg1.jfif";
-import Item7 from "../../../assets/img/rewies/rewImg3.jfif";
-import Item8 from "../../../assets/img/rewies/rew.jpg";
-import Item9 from "../../../assets/img/rewies/rew1.jfif";
-import Item11 from "../../../assets/img/rewies/rew3.jfif";
-import Item12 from "../../../assets/img/rewies/rew4.jfif";
-import Item13 from "../../../assets/img/rewies/rew5.jpg";
-import Item14 from "../../../assets/img/rewies/rew6.jpg";
-import Item15 from "../../../assets/img/rewies/rew7.jpg";
-import Item16 from "../../../assets/img/rewies/rew8.jpg";
-import Item17 from "../../../assets/img/rewies/rew9.jpg";
-import Item18 from "../../../assets/img/rewies/rew10.jpg";
+import Work4 from "../../../assets/img/workouts/work4.JPG";
+import Work5 from "../../../assets/img/workouts/work5.png";
+import Work6 from "../../../assets/img/workouts/work6.png";
+import { ReactComponent as Logo } from "../../../assets/svg/logo.svg";
+import { ReactComponent as BaluSport } from "../../../assets/svg/baluSport.svg";
+import { ReactComponent as Workout } from "../../../assets/svg/workouts/workout.svg";
+import { ReactComponent as Nutrition } from "../../../assets/svg/workouts/nutrition.svg";
+import { ReactComponent as Active } from "../../../assets/svg/workouts/active.svg";
+import { ReactComponent as Message } from "../../../assets/svg/workouts/message.svg";
+import AboutCard from "../../common/aboutCard/AboutCard";
 const Workouts = () => {
-  const rewImg = [Item1, Item2, Item3, Item4, Item5, Item6, Item7];
-  const rew = [
-    Item8,
-    Item9,
-    Item11,
-    Item12,
-    Item13,
-    Item14,
-    Item15,
-    Item16,
-    Item17,
-    Item18,
+  const firstAboutCard = [
+    "Тренировки доступны в любое время",
+    "Подходит для любого уровня подготовки",
+    "Детальный разбор упражнений. Остались вопросы, можно посмотреть сначала или задать вопрос мне!",
+    "Работай в комфортном темпе, база - более 100+ тренировок!",
+  ];
+  const secondAboutCard = [
+    "Рекомендации по питанию",
+    "Никаких ограничений",
+    "Максимальный комфорт и любовь к себе и своему телу",
+    "Основы психологии РПП",
+  ];
+  const thirdAboutCard = [
+    "Силовые тренировки",
+    "Расстяжка",
+    "Элементы йоги",
+    "Комплексный подход - получи результат и максимальную пользу для здоровья",
+  ];
+  const fourthAboutCard = ["Доступ к чату", "Рекомендации"];
+  const firstCardType2 = [
+    "Особое внимание обратите на привычки питания и контакт с телом — чувствуете ли переедание, быстро ли устаёте, какой уровень подвижности.",
+  ];
+  const secondCardType2 = [
+    "Особое внимание обратите на привычки питания и контакт с телом — чувствуете ли переедание, быстро ли устаёте, какой уровень подвижности.",
+  ];
+  const thirdCardType2 = [
+    "Особое внимание обратите на привычки питания и контакт с телом — чувствуете ли переедание, быстро ли устаёте, какой уровень подвижности.",
+  ];
+  const fourthCardType2 = [
+    "Особое внимание обратите на привычки питания и контакт с телом — чувствуете ли переедание, быстро ли устаёте, какой уровень подвижности.",
   ];
   return (
     <>
-      <div className="_container">
-        <div className="mainWorkouts__container">
-          <div className="mainWorkouts__container-imageContainer">
-            <img
-              className="mainWorkouts__container-image"
-              src={Work1}
-              alt="картинка тренируется"
-            />
-            <div className="mainWorkouts__container-content">
-              <p>
-                У вас нет возможности ходить в спортивный зал? Онлайн тренировки
-                для занятия дома!
-              </p>
-              <div className="content">
-                <p className="content-m">
-                  Это удобно и просто! И сейчас я расскажу, как проходят
-                  тренировки со мной
-                </p>
-              </div>
+      <main className="workouts">
+        <div className="_container">
+          <div className="workouts__block">
+            <div className="workouts__block-logo">
+              <Logo className="workouts__block-logo-icon" />{" "}
+            </div>
+            <div className="workouts__block-bage">
+              Алёна Балу <br />
+              ФИТНЕС-ТРЕНЕР
             </div>
           </div>
         </div>
-
-        <div className="flex">
-          <div className="workouts__container-block">
-            <p>Мои тренировки онлайн подойдут тем, кто хочет:</p>
-            <ul>
-              <div className="block-list">
-                <li>
-                  <CheckMark
-                    height="35px"
-                    width="35px"
-                    className="workout-icon"
-                  />
-                  <span> почувствовать свое тело</span>
-                </li>
-              </div>
-              <li>
-                {" "}
-                <CheckMark
-                  height="35px"
-                  width="35px"
-                  className="workout-icon"
-                />
-                <span> проработать все группы мышц</span>
-              </li>
-              <li>
-                {" "}
-                <CheckMark
-                  height="35px"
-                  width="35px"
-                  className="workout-icon"
-                />
-                <span> получать энергию от занятий</span>
-              </li>
-              <li>
-                <CheckMark
-                  height="35px"
-                  width="35px"
-                  className="workout-icon"
-                />
-                <span> заниматься осознанно</span>
-              </li>
-              <li>
-                <CheckMark
-                  height="35px"
-                  width="35px"
-                  className="workout-icon"
-                />
-                <span> научиться правильной технике</span>
-              </li>
-            </ul>
-          </div>
-          <div className="workouts__container-block">
-            <p>Минимум инвентаря!</p>
-            <ul>
-              <div className="block-list">
-                <li>
-                  <CheckMark
-                    height="35px"
-                    width="35px"
-                    className="workout-icon"
-                  />
-                  <span> коврик</span>
-                </li>
-              </div>
-              <li>
-                {" "}
-                <CheckMark
-                  height="35px"
-                  width="35px"
-                  className="workout-icon"
-                />
-                <span> 2 гантели от 1.5 до 3 кг или бутылка воды</span>
-              </li>
-              <li>
-                <CheckMark
-                  height="35px"
-                  width="35px"
-                  className="workout-icon"
-                />
-                <span> фитнес резинка</span>
-              </li>
-              <li>
-                <p>Дополнительно, но необязательно:</p>
-              </li>
-              <li>
-                <CheckMark
-                  height="35px"
-                  width="35px"
-                  className="workout-icon"
-                />
-                <span> два утяжелителя по 1кг</span>
-              </li>
-              <li>
-                <CheckMark
-                  height="35px"
-                  width="35px"
-                  className="workout-icon"
-                />
-                <span> ролл для МФР</span>
-              </li>
-              <li>
-                <CheckMark
-                  height="35px"
-                  width="35px"
-                  className="workout-icon"
-                />
-                <span> мяч для МФР</span>
-              </li>
-            </ul>
-          </div>
+        <div className="workouts__image _ibg">
+          <img src={Work4} alt="картинка тренируется" />
         </div>
-        <div className="flex">
-          <div className="workouts__container-textBlock">
-            <h1>НЕ МАРАФОН</h1>
-            <p>
-              а постоянная работа с телом через разминку, суставную гимнастику,
-              силовые и функциональные упражнения, растяжку и расслабление
-            </p>
-            <p>упражнения, которые я выполняю сама</p>
-            <p>
-              почувствую свое тело, найди гармонию с ним. <br />
-              Физическая и эмоциональная легкость
-            </p>
+      </main>
+      <section className="workouts__phones">
+        <div className="workouts__phones-image">
+          <img width={"350px"} src={Work5} alt="картинка тренируется" />
+        </div>
+        <div className="workouts__phones-laptop">
+          <img width={"150px"} src={Work6} alt="картинка тренируется" />
+        </div>
+        <h1>Построй тело своей мечты в онлайне</h1>
+      </section>
+      <div className="workouts__info">
+        <article className="workouts__info-lable">
+          <div className="workouts__info-lable-logo">
+            <BaluSport
+              className="workouts__info-lable-logo-icon"
+              fill="#B39365"
+            />
           </div>
-          <div className="workouts__container-block">
-            <div className="imageWork__container">
-              <img
-                className="imageWork__container-card"
-                src={Work2}
-                alt="картинка тренируется"
+          <div className="workouts__info-lable-text">ЭТО...</div>
+        </article>
+        <section className="workouts__about">
+          <AboutCard
+            list={firstAboutCard}
+            titleIcon={<Workout />}
+            title="Новая тренировка три раза в неделю"
+            type={1}
+          />
+          <AboutCard
+            list={secondAboutCard}
+            titleIcon={<Nutrition />}
+            title="Работа с пищевым поведением"
+            type={1}
+          />
+          <AboutCard
+            list={thirdAboutCard}
+            titleIcon={<Active />}
+            title="Разные виды активности"
+            type={1}
+          />
+          <AboutCard
+            list={fourthAboutCard}
+            titleIcon={<Message />}
+            title="Обратная связь"
+            type={1}
+          />
+        </section>
+        <section className="workouts__for">
+          <div className="workouts__for-container">
+            <h1 className="workouts__for-container-header">
+              Кому подойдут тренировки со мной?
+            </h1>
+            <div className="workouts__for-container-cards">
+              <AboutCard
+                list={firstCardType2}
+                title="КТО НИ РАЗУ СИСТЕМНО НЕ ЗАНИМАЛСЯ СВОИМ ТЕЛОМ"
+                type={2}
+                badge="Новичкам"
               />
-              <div className="imageWork__container-text1">
-                <h1>Что важно?</h1>
-                <p>
-                  Тренировки <b>В ЗАПИСИ</b>, что дает вам возможность находить
-                  время для занятия, когда <b>ВАМ УДОБНО</b>
-                </p>
+              <AboutCard
+                list={secondCardType2}
+                title="ХОДИТЕ КАКОЕ-ТО ВРЕМЯ В ЗАЛ, НО НЕТ РЕЗУЛЬТАТА"
+                type={2}
+                badge="Начинающим"
+              />
+              <AboutCard
+                list={thirdCardType2}
+                title="ИМЕЕТЕ БОЛЬШОЙ ОПЫТ, НО ПРОГРЕСС ОСТАНОВИЛСЯ"
+                type={2}
+                badge="Продвинутым"
+              />
+              <AboutCard
+                list={fourthCardType2}
+                title="ТРЕНЕРУЕТЕ ЛЮДЕЙ, НО ХОТИТЕ ПОВЫСИТЬ СВОЙ УРОВЕНЬ"
+                type={2}
+                badge="Мастерам"
+              />
+            </div>
+          </div>
+        </section>
+        <section className="workouts__rate-color">
+          <div className="workouts__rate">
+            <h1 className="workouts__rate-title">ВЫБЕРИ СВОЙ ТАРИФ</h1>
+
+            <div className="workouts__rate-cards">
+              <div className="workouts__rate-cards-card">
+                <div className="workouts__rate-cards-card-btn">
+                  <h1>САМОСТОЯТЕЛЬНЫЙ</h1>
+                  <u>стоимость</u>
+                  <div>1600 руб.</div>
+                </div>
+                <div className="workouts__rate-cards-card-text">
+                  Вы занимаетесь по полнометражным видео тренировком в любое
+                  удобное для вас время + рекомендации по питанию
+                </div>
               </div>
-              <div className="imageWork__container-text2">
-                <h1>100+</h1>
-                <p>
-                  тренировок уже записано, доступ в <b>ЛЮБОЕ</b> время
-                </p>
+              <div className="workouts__rate-cards-card">
+                <div className="workouts__rate-cards-card-btn">
+                  <h1>С куратором</h1>
+                </div>
+                <div className="workouts__rate-cards-card-text">
+                  Вы занимаетесь по полнометражным видео тренировком в любое
+                  удобное для вас время + рекомендации по питанию +
+                  индивидуальный расчет БЖУ + чат поддержка
+                </div>
+              </div>
+              <div className="workouts__rate-cards-card">
+                <div className="workouts__rate-cards-card-btn">
+                  <h1>С куратором VIP</h1>
+                </div>
+                <div className="workouts__rate-cards-card-text">
+                  Пакет с куратором +3 персональных занятия со мной для
+                  постановки правильной техники
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="rewiew__container">
-          <TitleLogo title={"Ваши отзывы"} />
-          <div className="image-slider-container">
-            <div className="image-slider__image">
-              <ImageSlider slides={rewImg} />
-            </div>
-            <div className="image-slider__image">
-              <ImageSlider slides={rew} />
-            </div>
-          </div>
-        </div>
-        <div className="mainWorkouts__container">
-          <div className="mainWorkouts__container-imageContainer">
-            <img
-              className="mainWorkouts__container-image"
-              src={Work3}
-              alt="картинка тренируется"
-            />
-            <div className="mainWorkouts__container-content1">
-              <p>
-                Позволь себе месяц тренировок с тренером за стоимость одной
-                персональной тренировки в зале
-              </p>
-            </div>
-            <div className="mainWorkouts__container-content2">
-              <p>
-                <b> 1500р</b> доступ на 1 месяц
-              </p>
-              <p>
-                <b>2200р</b> доступ на 2 месяца
-              </p>
-            </div>
-          </div>
-        </div>
+        </section>
       </div>
     </>
   );

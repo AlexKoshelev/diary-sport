@@ -1,4 +1,5 @@
 import React from "react";
+import Calendar from "../../common/calendar/Calendar";
 
 const PreviewDiaryPage = () => {
   return (
@@ -7,6 +8,7 @@ const PreviewDiaryPage = () => {
         Чтобы получить доступ к дневнику, необходимо войти или
         зарегистрироваться!
       </div>
+      <Calendar />
     </div>
   );
 };

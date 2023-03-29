@@ -1,0 +1,12 @@
+@import "../calendarGrid/style/calendarGrid";
+@import "../monitor/style/monitor";
+@import "../../../../../style/variables";
+.calendar__wrapper{
+    max-width:100%;
+    font-size: 0.8rem;
+    background-color: rgb(252, 238, 235);
+    color: $MAIN_COLOR3_BOLD;
+    border: solid 1px $GOLD_COLOR;
+    border-radius: 5px;
+    overflow: hidden;
+}

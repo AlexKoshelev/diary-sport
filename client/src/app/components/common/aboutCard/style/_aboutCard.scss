@@ -1,0 +1,137 @@
+@import "../../../../../style/variables";
+@import "../../../../../style/mixins/response-mixin.scss";
+/* карточка тип 1 */
+.aboutCard{
+    margin: 2em;
+    font-size: 0.75rem;
+    width: 400px;
+    min-height: 260px;
+    border: solid 1px $GOLD_COLOR;
+    border-radius: 1em;
+    background-color: #EACCC7;
+    color: $MAIN_COLOR3_BOLD;
+    padding: 1.4em;
+    
+    &-header{
+        display: flex;
+        justify-content: space-between;
+        h1{
+            font-size: 1rem;
+            margin-top: 0.5em;
+            margin-right: 1em;
+        }
+    }
+    h1 {
+        color: #472B29;
+        font-weight: 500;
+    }
+    &-list{
+        margin-top: 1em;
+        &-icon>svg{
+        fill: $GOLD_COLOR;
+        margin-bottom: -3px;
+        height: 20px;
+        width: 20px;
+        margin-right: 5px;
+    }
+    &-text{
+       margin-top: 0.4em; 
+       line-height: 1.2em;
+    }
+    
+}
+        .list-container{
+            margin-bottom: 1em;
+        }
+}
+
+.secondCard{
+  
+}
+
+    @include laptop{
+        .aboutCard{
+            margin: 1em;
+        }
+       
+    }
+
+
+    /* карточка тип 2 */
+
+    .aboutCard__type2{
+        margin: 2em;
+        font-size: 0.75rem;
+        max-width: 500px;
+        min-height: 260px;
+        background-color: #fff;
+        border-radius: 1em;
+        color: $MAIN_COLOR3_BOLD;
+        padding: 1.4em;
+        position: relative;
+        &-badge{
+            position: absolute;
+            background-color: $MAIN_COLOR2;
+            padding: 0.5em 2em;
+            font-size: 1rem;
+            top: -8%;
+            left: 50%;
+            transform: translate(-50%, 10%)
+        }
+        &-title{
+            margin-top: 1em;
+            font-size: 1rem;
+            line-height: 1.3rem;
+        }
+        &-list{
+            text-align: justify;
+            padding-top: 2em;
+        }
+    }
+
+@media screen and (max-width:1170px){
+    .aboutCard__type2{
+        margin: 1em;
+        width: 400px;
+    }
+}
+@media screen and (max-width:910px){
+    .aboutCard__type2{
+        margin: 1em;
+        width: 350px;
+    }
+}
+@include phones {
+    .aboutCard__type2{
+        width: 350px;
+        min-height: 260px;
+        &-badge{
+            padding: 0.5em 1em;
+            font-size: 0.9rem;  
+        }
+        &-title{
+            font-size: 0.8rem;
+            line-height: 1.1rem;
+        }
+        &-list{
+            padding-top: 1em;
+        }
+    }
+}
+@media screen and (max-width:400px){
+    .aboutCard__type2{
+        max-width: 350px;
+        min-height: 200px;
+        &-badge{
+            padding: 0.5em 1em;
+            font-size: 0.9rem;  
+        }
+        &-title{
+            font-size: 0.8rem;
+            line-height: 1.1rem;
+        }
+        &-list{
+            padding-top: 1em;
+        }
+    }
+}

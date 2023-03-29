@@ -1,12 +1,11 @@
 @import "../../../../../style/variables";
 @import "../../../../../style/mixins/response-mixin.scss";
   .header {
-    max-width: 100%;
     background-color: $MAIN_COLOR1;
     font-size: 1rem;
     height: 3em;
-    display: flex;
-    margin-bottom: 20px;
+
+   
     ul {
         display: flex;
     }

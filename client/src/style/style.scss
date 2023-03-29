@@ -42,21 +42,23 @@ ul li{list-style: none;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 ._container {/*технический класс, содержит общие стили*/
-    width: 1240px; 
+    max-width: 1240px; 
     margin: 0px auto; /*выравнивает контейнер по середине (для ограниченных по ширине блоков)*/
     box-sizing: content-box;
     padding: 0 15px;
-	/* @include laptop {
-		width: 992px;
-	}
-	@include tablets {
-		width: 768px;
-	}
-	@include phones {
-		width: 480px;
-	} */
+
 }
 
+._ibg{
+	position: relative;
+}
+._ibg img {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left:0;
+	object-fit: cover;
+}
 body{
     background-color: $MAIN_COLOR2;
 	font-family: 'Inter', sans-serif;

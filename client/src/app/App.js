@@ -23,7 +23,7 @@ function App() {
       <AppLoader>
         <ConfigProvider locale={ruRU}>
           <NavBar />
-          {/*   {element} */}
+          {element}
         </ConfigProvider>
       </AppLoader>
     </>
