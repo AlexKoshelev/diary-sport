@@ -22,19 +22,18 @@ const Calendar = () => {
       "Декабрь",
     ],
   });
-
+  moment.updateLocale("ru", {
+    weekdaysMin: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
+  });
   const [today, setToday] = useState(moment());
   const startDay = today.clone().startOf("month").startOf("week");
   const prevHandler = () => {
-    console.log("prev");
     setToday((prevState) => prevState.clone().subtract(1, "month"));
   };
   const todayHandler = () => {
-    console.log("todayHandler");
     setToday(moment());
   };
   const nextHandler = () => {
-    console.log("nextHandler");
     setToday((prevState) => prevState.clone().add(1, "month"));
   };
 
@@ -47,7 +46,7 @@ const Calendar = () => {
         nextHandler={nextHandler}
         prevHandler={prevHandler}
       />
-      <CalendarGrid startDay={startDay} />
+      <CalendarGrid startDay={startDay} today={today} />
     </div>
   );
 };
